@@ -16,10 +16,11 @@
 <body>
 
     <!-- ==========================================
-         ENCABEZADO Y NAVEGACIÓN
+         HEADER Y NAVEGACIÓN
          ========================================== -->
 
     <header>
+
         <nav aria-label="Navegación principal">
 
             <a href="#inicio" class="logo">
@@ -27,6 +28,7 @@
             </a>
 
             <ul>
+
                 <li>
                     <a href="#inicio">Inicio</a>
                 </li>
@@ -36,11 +38,21 @@
                 </li>
 
                 <li>
+                    <a href="#proyectos">Proyectos</a>
+                </li>
+
+                <li>
+                    <a href="#habilidades">Habilidades</a>
+                </li>
+
+                <li>
                     <a href="#contacto">Contacto</a>
                 </li>
+
             </ul>
 
         </nav>
+
     </header>
 
 
@@ -51,7 +63,7 @@
     <main>
 
         <!-- ======================================
-             SECCIÓN INICIO
+             INICIO
              ====================================== -->
 
         <section id="inicio">
@@ -66,39 +78,15 @@
                     Ximena
                 </h1>
 
-                <h2>
-                    Estudiante de Ingeniería de Software
-                </h2>
-
                 <p class="descripcion">
-                    Apasionada por la tecnología y el desarrollo de
-                    soluciones digitales. Actualmente estoy fortaleciendo
-                    mis conocimientos en desarrollo web, programación
-                    y bases de datos.
+                    Estudiante de Ingeniería de Software apasionada
+                    por la tecnología y el desarrollo de soluciones
+                    digitales.
                 </p>
 
                 <a href="#sobre-mi" class="boton">
                     Conoce más sobre mí
                 </a>
-
-
-                <!-- Tecnologías / áreas -->
-
-                <div class="inicio-info">
-
-                    <span>
-                        💻 Desarrollo Web
-                    </span>
-
-                    <span>
-                        🐍 Python
-                    </span>
-
-                    <span>
-                        🗄️ Bases de Datos
-                    </span>
-
-                </div>
 
             </div>
 
@@ -106,89 +94,97 @@
 
 
         <!-- ======================================
-             SECCIÓN SOBRE MÍ
+             SOBRE MÍ
              ====================================== -->
 
         <section id="sobre-mi">
 
-            <div class="sobre-introduccion">
+            <h2>
+                Sobre mí
+            </h2>
 
-                <p class="etiqueta">
-                    Sobre mí
-                </p>
+            <div class="sobre-contenido">
 
-                <h2>
-                    Construyendo soluciones con tecnología
-                </h2>
+                <figure class="sobre-imagen">
 
-                <p>
-                    Soy estudiante de Ingeniería de Software y estoy
-                    desarrollando mis conocimientos en programación,
-                    desarrollo web, bases de datos y tecnologías de software.
-                </p>
+                    <!-- Imagen pendiente de agregar -->
 
-                <p>
-                    Me gusta aprender mediante proyectos prácticos y
-                    convertir ideas en soluciones funcionales.
-                </p>
+                    <img src="img/perfil.jpg"
+                        alt="Fotografía de Ximena">
 
-            </div>
+                </figure>
 
 
-            <!-- Habilidades -->
+                <article class="sobre-texto">
 
-            <div class="tarjeta habilidades">
+                    <h3>
+                        Construyendo soluciones con tecnología
+                    </h3>
 
-                <h3>
-                    Mis habilidades
-                </h3>
+                    <p>
+                        Soy estudiante de Ingeniería de Software y estoy
+                        desarrollando mis conocimientos en programación,
+                        desarrollo web, bases de datos y tecnologías
+                        de software.
+                    </p>
 
-                <ul>
+                    <p>
+                        Me gusta aprender mediante proyectos prácticos
+                        y convertir ideas en soluciones funcionales.
+                    </p>
 
-                    <li>HTML5 y CSS</li>
-
-                    <li>JavaScript</li>
-
-                    <li>Python</li>
-
-                    <li>MySQL</li>
-
-                    <li>Git y GitHub</li>
-
-                    <li>Desarrollo Web</li>
-
-                </ul>
+                </article>
 
             </div>
 
+        </section>
 
-            <!-- Proyectos -->
 
-            <div class="proyectos">
+        <!-- ======================================
+             PROYECTOS
+             ====================================== -->
 
-                <h3>
-                    Mis proyectos
-                </h3>
+        <section id="proyectos">
 
-                <article>
+            <h2>
+                Mis proyectos
+            </h2>
 
-                    <h4>
+            <div class="proyectos-contenedor">
+
+                <article class="proyecto">
+
+                    <!-- Imagen pendiente de agregar -->
+
+                    <img src="img/fintrack.jpg"
+                        alt="Vista previa del proyecto FinTrack">
+
+                    <h3>
                         FinTrack
-                    </h4>
+                    </h3>
 
                     <p>
                         Aplicación web orientada al seguimiento y
                         organización de las finanzas personales.
                     </p>
 
+                    <a href="#" class="boton">
+                        Ver proyecto
+                    </a>
+
                 </article>
 
 
-                <article>
+                <article class="proyecto">
 
-                    <h4>
+                    <!-- Imagen pendiente de agregar -->
+
+                    <img src="img/desarrollo-web.jpg"
+                        alt="Proyecto académico de desarrollo web">
+
+                    <h3>
                         Proyectos de desarrollo
-                    </h4>
+                    </h3>
 
                     <p>
                         Desarrollo de proyectos académicos relacionados
@@ -196,6 +192,33 @@
                         y aplicaciones web.
                     </p>
 
+                    <a href="#" class="boton">
+                        Ver proyecto
+                    </a>
+
+                </article>
+
+
+                <article class="proyecto">
+
+                    <!-- Imagen pendiente de agregar -->
+
+                    <img src="img/videojuegos.jpg"
+                        alt="Proyecto de desarrollo de videojuegos">
+
+                    <h3>
+                        Desarrollo de videojuegos
+                    </h3>
+
+                    <p>
+                        Creación de videojuegos utilizando tecnologías
+                        como Python, Pygame y JavaScript.
+                    </p>
+
+                    <a href="#" class="boton">
+                        Ver proyecto
+                    </a>
+
                 </article>
 
             </div>
@@ -204,7 +227,74 @@
 
 
         <!-- ======================================
-             SECCIÓN CONTACTO
+             HABILIDADES
+             ====================================== -->
+
+        <section id="habilidades">
+
+            <h2>
+                Mis habilidades
+            </h2>
+
+            <div class="habilidades-contenedor">
+
+                <span class="habilidad">
+                    HTML5
+                </span>
+
+                <span class="habilidad">
+                    CSS
+                </span>
+
+                <span class="habilidad">
+                    JavaScript
+                </span>
+
+                <span class="habilidad">
+                    Python
+                </span>
+
+                <span class="habilidad">
+                    MySQL
+                </span>
+
+                <span class="habilidad">
+                    Git
+                </span>
+
+                <span class="habilidad">
+                    GitHub
+                </span>
+
+                <span class="habilidad">
+                    Desarrollo Web
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             INFORMACIÓN DESTACADA
+             ====================================== -->
+
+        <aside>
+
+            <h2>
+                Dato destacado
+            </h2>
+
+            <p>
+                Me gusta aprender mediante proyectos prácticos
+                y experimentar con nuevas tecnologías.
+            </p>
+
+        </aside>
+
+
+        <!-- ======================================
+             CONTACTO
              ====================================== -->
 
         <section id="contacto">
@@ -227,8 +317,6 @@
 
             </div>
 
-
-            <!-- Formulario accesible -->
 
             <form action="#" method="post">
 
@@ -268,22 +356,6 @@
 
                 <div class="campo">
 
-                    <label for="asunto">
-                        Asunto:
-                    </label>
-
-                    <input
-                        type="text"
-                        id="asunto"
-                        name="asunto"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="campo">
-
                     <label for="mensaje">
                         Mensaje:
                     </label>
@@ -310,7 +382,7 @@
 
 
     <!-- ==========================================
-         PIE DE PÁGINA
+         FOOTER
          ========================================== -->
 
     <footer>
@@ -318,6 +390,26 @@
         <p>
             &copy; 2026 Ximena. Todos los derechos reservados.
         </p>
+
+        <nav aria-label="Redes sociales">
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        GitHub
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        LinkedIn
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
 
     </footer>
 

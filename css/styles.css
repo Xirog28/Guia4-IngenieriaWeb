@@ -3,7 +3,6 @@
    ======================================== */
 
 :root {
-
     --beige-claro: #f5f0e6;
     --beige: #e8dfcf;
     --beige-oscuro: #d8cdb9;
@@ -44,8 +43,8 @@ body {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 ul {
@@ -53,60 +52,70 @@ ul {
 }
 
 section {
-    padding: 90px 8%;
+    padding: 80px 8%;
 }
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
     line-height: 1.2;
 }
 
 
 /* ========================================
-   HEADER Y NAVEGACIÓN
+   HEADER
    ======================================== */
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     background-color: var(--blanco);
 
     border-bottom: 1px solid var(--beige-oscuro);
-
-    position: sticky;
-    top: 0;
-
-    z-index: 1000;
 }
 
-nav {
+
+/* Navegación principal */
+
+header nav {
     max-width: 1200px;
 
     margin: 0 auto;
-
     padding: 20px 8%;
 
     display: flex;
+    flex-direction: row;
 
     justify-content: space-between;
     align-items: center;
 }
 
+
+/* Logo */
+
 .logo {
     color: var(--verde-oliva-oscuro);
 
     font-size: 1.6rem;
-
     font-weight: bold;
 }
 
-nav ul {
+
+/* Lista de navegación */
+
+header nav ul {
     display: flex;
+    flex-direction: row;
+
+    justify-content: flex-end;
+    align-items: center;
 
     gap: 30px;
 }
 
-nav ul a {
+header nav ul a {
     color: var(--texto);
 
     font-weight: 600;
@@ -114,22 +123,23 @@ nav ul a {
     transition: color 0.3s ease;
 }
 
-nav ul a:hover {
+header nav ul a:hover {
     color: var(--verde-oliva-oscuro);
 }
 
 
 /* ========================================
-   SECCIÓN INICIO
+   INICIO
    ======================================== */
 
 #inicio {
-
     min-height: 90vh;
 
     display: flex;
+    flex-direction: column;
 
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
 
     background-color: var(--beige-claro);
 }
@@ -142,37 +152,25 @@ nav ul a:hover {
     color: var(--verde-oliva-oscuro);
 
     font-size: 1.1rem;
-
     font-weight: bold;
 
     margin-bottom: 10px;
 }
 
 #inicio h1 {
-
     color: var(--verde-oliva-oscuro);
 
     font-size: 4.5rem;
 
-    margin-bottom: 10px;
-}
-
-#inicio h2 {
-
-    color: var(--texto);
-
-    font-size: 2rem;
-
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .descripcion {
+    max-width: 650px;
 
     color: var(--texto-suave);
 
     font-size: 1.1rem;
-
-    max-width: 650px;
 
     margin-bottom: 30px;
 }
@@ -183,11 +181,9 @@ nav ul a:hover {
    ======================================== */
 
 .boton {
-
     display: inline-block;
 
     background-color: var(--verde-oliva);
-
     color: var(--blanco);
 
     padding: 13px 25px;
@@ -202,7 +198,6 @@ nav ul a:hover {
 }
 
 .boton:hover {
-
     background-color: var(--verde-oliva-oscuro);
 
     transform: translateY(-2px);
@@ -210,136 +205,77 @@ nav ul a:hover {
 
 
 /* ========================================
-   INFORMACIÓN DE INICIO
-   ======================================== */
-
-.inicio-info {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-top: 30px;
-}
-
-.inicio-info span {
-
-    background-color: var(--beige);
-
-    color: var(--verde-oliva-oscuro);
-
-    padding: 8px 15px;
-
-    border-radius: 20px;
-
-    font-size: 0.9rem;
-
-    font-weight: 600;
-
-    border: 1px solid var(--beige-oscuro);
-}
-
-
-/* ========================================
-   SECCIÓN SOBRE MÍ
+   SOBRE MÍ
    ======================================== */
 
 #sobre-mi {
-
     background-color: var(--blanco);
+}
 
+#sobre-mi > h2 {
+    color: var(--verde-oliva-oscuro);
+
+    font-size: 2.5rem;
+
+    margin-bottom: 40px;
+}
+
+
+/* Contenedor Flexbox */
+
+.sobre-contenido {
     display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 40px;
+    flex-direction: row;
 
     justify-content: space-between;
-}
+    align-items: center;
 
-.sobre-introduccion {
-
-    flex: 1 1 100%;
-}
-
-.etiqueta {
-
-    color: var(--verde-oliva-oscuro);
-
-    font-weight: bold;
-
-    margin-bottom: 10px;
-}
-
-#sobre-mi h2 {
-
-    color: var(--verde-oliva-oscuro);
-
-    font-size: 2.3rem;
-
-    margin-bottom: 20px;
-}
-
-.sobre-introduccion p {
-
-    color: var(--texto-suave);
-
-    margin-bottom: 15px;
-
-    max-width: 800px;
+    gap: 50px;
 }
 
 
-/* ========================================
-   TARJETA DE HABILIDADES
-   ======================================== */
+/* Imagen */
 
-.habilidades {
-
+.sobre-imagen {
     flex: 1 1 300px;
 
-    background-color: var(--beige-claro);
+    margin: 0;
+}
 
-    padding: 30px;
+.sobre-imagen img {
+    display: block;
 
-    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+
+    margin: 0 auto;
+
+    border-radius: 15px;
 
     box-shadow: 0 5px 20px var(--sombra);
 }
 
-#sobre-mi h3 {
 
+/* Texto */
+
+.sobre-texto {
+    flex: 1 1 400px;
+
+    align-self: flex-start;
+}
+
+.sobre-texto h3 {
     color: var(--texto);
 
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 
     margin-bottom: 20px;
 }
 
-.habilidades ul {
+.sobre-texto p {
+    color: var(--texto-suave);
 
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-}
-
-.habilidades li {
-
-    background-color: var(--verde-oliva-claro);
-
-    color: var(--texto);
-
-    padding: 8px 14px;
-
-    border-radius: 20px;
-
-    font-size: 0.95rem;
-
-    font-weight: 600;
+    margin-bottom: 15px;
 }
 
 
@@ -347,78 +283,200 @@ nav ul a:hover {
    PROYECTOS
    ======================================== */
 
-.proyectos {
-
-    flex: 1 1 300px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 20px;
-}
-
-.proyectos h3 {
-
-    margin-bottom: 0;
-}
-
-.proyectos article {
-
+#proyectos {
     background-color: var(--beige-claro);
+}
+
+#proyectos > h2 {
+    color: var(--verde-oliva-oscuro);
+
+    font-size: 2.5rem;
+
+    margin-bottom: 40px;
+}
+
+
+/* Contenedor de proyectos */
+
+.proyectos-contenedor {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 25px;
+}
+
+
+/* Tarjeta de proyecto */
+
+.proyecto {
+    flex-grow: 1;
+
+    flex-basis: 280px;
+
+    min-width: 250px;
 
     padding: 25px;
 
-    border-left: 5px solid var(--verde-oliva);
+    background-color: var(--blanco);
 
-    border-radius: 8px;
+    border-radius: 12px;
 
     box-shadow: 0 5px 20px var(--sombra);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
 }
 
-.proyectos article h4 {
 
+/* Imagen del proyecto */
+
+.proyecto img {
+    display: block;
+
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+
+/* Título */
+
+.proyecto h3 {
     color: var(--verde-oliva-oscuro);
 
-    font-size: 1.2rem;
-
-    margin-bottom: 10px;
+    font-size: 1.3rem;
 }
 
-.proyectos article p {
 
+/* Descripción */
+
+.proyecto p {
     color: var(--texto-suave);
 
-    margin: 0;
+    flex-grow: 1;
+}
+
+
+/* Botón */
+
+.proyecto .boton {
+    align-self: flex-start;
 }
 
 
 /* ========================================
-   SECCIÓN CONTACTO
+   HABILIDADES
    ======================================== */
 
-#contacto {
+#habilidades {
+    background-color: var(--blanco);
+}
 
-    background-color: var(--beige-claro);
+#habilidades > h2 {
+    color: var(--verde-oliva-oscuro);
 
+    font-size: 2.5rem;
+
+    margin-bottom: 35px;
+}
+
+
+/* Contenedor de habilidades */
+
+.habilidades-contenedor {
     display: flex;
+    flex-direction: row;
 
     flex-wrap: wrap;
 
-    gap: 60px;
+    justify-content: center;
+    align-items: center;
 
-    justify-content: space-between;
-
-    align-items: flex-start;
+    gap: 15px;
 }
 
-.contacto-introduccion {
 
+/* Chips */
+
+.habilidad {
+    padding: 10px 18px;
+
+    background-color: var(--verde-oliva-claro);
+
+    color: var(--texto);
+
+    border-radius: 20px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   ASIDE
+   ======================================== */
+
+aside {
+    padding: 40px 8%;
+
+    background-color: var(--beige);
+
+    text-align: center;
+}
+
+aside h2 {
+    color: var(--verde-oliva-oscuro);
+
+    margin-bottom: 10px;
+}
+
+aside p {
+    color: var(--texto-suave);
+}
+
+
+/* ========================================
+   CONTACTO
+   ======================================== */
+
+#contacto {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 60px;
+
+    background-color: var(--beige-claro);
+}
+
+
+/* Introducción */
+
+.contacto-introduccion {
     flex: 1 1 350px;
 }
 
-#contacto h2 {
+.etiqueta {
+    color: var(--verde-oliva-oscuro);
 
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+#contacto h2 {
     color: var(--verde-oliva-oscuro);
 
     font-size: 2.5rem;
@@ -427,7 +485,6 @@ nav ul a:hover {
 }
 
 .contacto-introduccion > p:last-child {
-
     color: var(--texto-suave);
 
     font-size: 1.05rem;
@@ -439,43 +496,46 @@ nav ul a:hover {
    ======================================== */
 
 #contacto form {
-
     flex: 1 1 450px;
 
-    background-color: var(--blanco);
-
     padding: 35px;
+
+    background-color: var(--blanco);
 
     border-radius: 12px;
 
     box-shadow: 0 5px 25px var(--sombra);
 
     display: flex;
-
     flex-direction: column;
 
     gap: 20px;
 }
 
+
+/* Campo */
+
 .campo {
-
     display: flex;
-
     flex-direction: column;
 
     gap: 7px;
 }
 
-.campo label {
 
+/* Label */
+
+.campo label {
     color: var(--texto);
 
     font-weight: bold;
 }
 
+
+/* Inputs */
+
 .campo input,
 .campo textarea {
-
     width: 100%;
 
     padding: 12px;
@@ -489,41 +549,35 @@ nav ul a:hover {
     color: var(--texto);
 
     font-family: inherit;
-
     font-size: 1rem;
 
     outline: none;
-
-    transition: border-color 0.3s ease;
 }
 
 .campo input:focus,
 .campo textarea:focus {
-
     border-color: var(--verde-oliva);
 }
 
 .campo textarea {
-
     resize: vertical;
 }
 
+
+/* Botón */
+
 #contacto button {
+    padding: 13px 20px;
 
     border: none;
+    border-radius: 7px;
 
     background-color: var(--verde-oliva);
 
     color: var(--blanco);
 
-    padding: 13px 20px;
-
-    border-radius: 7px;
-
     font-family: inherit;
-
     font-size: 1rem;
-
     font-weight: bold;
 
     cursor: pointer;
@@ -534,7 +588,6 @@ nav ul a:hover {
 }
 
 #contacto button:hover {
-
     background-color: var(--verde-oliva-oscuro);
 
     transform: translateY(-2px);
@@ -546,14 +599,19 @@ nav ul a:hover {
    ======================================== */
 
 footer {
+    padding: 25px 8%;
 
     background-color: var(--verde-oliva-oscuro);
 
     color: var(--blanco);
 
-    text-align: center;
+    display: flex;
+    flex-direction: row;
 
-    padding: 25px 8%;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
 }
 
 footer p {
@@ -561,8 +619,30 @@ footer p {
 }
 
 
+/* Navegación del footer */
+
+footer nav {
+    padding: 0;
+    margin: 0;
+}
+
+footer nav ul {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+
 /* ========================================
-   BREAKPOINT 1 — TABLET
+   RESPONSIVE — TABLET
    ======================================== */
 
 @media (max-width: 900px) {
@@ -571,7 +651,7 @@ footer p {
         padding: 70px 6%;
     }
 
-    nav {
+    header nav {
         padding: 18px 6%;
     }
 
@@ -579,12 +659,8 @@ footer p {
         font-size: 3.8rem;
     }
 
-    #inicio h2 {
-        font-size: 1.7rem;
-    }
-
-    #sobre-mi {
-        gap: 25px;
+    .sobre-contenido {
+        gap: 30px;
     }
 
     #contacto {
@@ -594,7 +670,7 @@ footer p {
 
 
 /* ========================================
-   BREAKPOINT 2 — MÓVIL
+   RESPONSIVE — MÓVIL
    ======================================== */
 
 @media (max-width: 600px) {
@@ -603,8 +679,12 @@ footer p {
         padding: 60px 5%;
     }
 
-    nav {
 
+    /* ================================
+       NAVEGACIÓN
+       ================================ */
+
+    header nav {
         flex-direction: column;
 
         gap: 15px;
@@ -612,74 +692,108 @@ footer p {
         padding: 16px 5%;
     }
 
-    nav ul {
-
+    header nav ul {
         width: 100%;
+
+        flex-wrap: wrap;
 
         justify-content: center;
 
-        gap: 18px;
+        gap: 12px;
     }
 
-    nav ul a {
+    header nav ul a {
         font-size: 0.9rem;
     }
 
-    #inicio {
 
+    /* ================================
+       INICIO
+       ================================ */
+
+    #inicio {
         min-height: 80vh;
     }
 
     #inicio h1 {
-
         font-size: 3rem;
     }
 
-    #inicio h2 {
-
-        font-size: 1.4rem;
-    }
-
     .descripcion {
-
         font-size: 1rem;
     }
 
-    .inicio-info {
 
-        gap: 8px;
+    /* ================================
+       SOBRE MÍ
+       ================================ */
+
+    .sobre-contenido {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 30px;
     }
 
-    .inicio-info span {
+    .sobre-imagen,
+    .sobre-texto {
+        width: 100%;
 
-        font-size: 0.85rem;
+        flex-basis: 100%;
     }
 
-    #sobre-mi h2 {
-
-        font-size: 1.9rem;
+    .sobre-texto {
+        align-self: auto;
     }
 
-    .habilidades,
-    .proyectos article {
 
-        padding: 22px;
+    /* ================================
+       PROYECTOS
+       ================================ */
+
+    .proyecto {
+        flex-basis: 100%;
+
+        min-width: 0;
     }
+
+
+    /* ================================
+       HABILIDADES
+       ================================ */
+
+    .habilidades-contenedor {
+        justify-content: flex-start;
+    }
+
+
+    /* ================================
+       CONTACTO
+       ================================ */
 
     #contacto {
-
         flex-direction: column;
+
+        gap: 35px;
     }
 
     #contacto form {
-
         width: 100%;
+
+        flex-basis: auto;
 
         padding: 25px;
     }
 
-    #contacto h2 {
 
-        font-size: 2rem;
+    /* ================================
+       FOOTER
+       ================================ */
+
+    footer {
+        flex-direction: column;
+
+        text-align: center;
     }
 }
