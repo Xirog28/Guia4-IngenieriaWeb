@@ -797,3 +797,13 @@ footer nav a:hover {
         text-align: center;
     }
 }
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
